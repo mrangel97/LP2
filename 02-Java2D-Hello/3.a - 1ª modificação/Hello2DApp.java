@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Hello2DApp {
     public static void main (String[] args) {
         Hello2DFrame frame = new Hello2DFrame();
-		frame.getContentPane().setBackground(Color.green); // mudar cor de fundo
+        frame.getContentPane().setBackground(Color.green); // mudar cor de fundo
         frame.setVisible(true);
     }
 }

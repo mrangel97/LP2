@@ -33,7 +33,7 @@ class Hello2DFrame extends JFrame {
         g2d.drawLine(0,h, w,0);
 	g2d.setPaint(Color.blue);
 	g2d.drawRect(150,150,200,200);
-	g2d.setPaint(Color.yellow);
+	g2d.setPaint(Color.black);
 	g2d.drawOval(50,40,700,700); // foi construído um círculo
     }
 	

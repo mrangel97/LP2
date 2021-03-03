@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Hello2DApp {
     public static void main (String[] args) {
         Hello2DFrame frame = new Hello2DFrame();
-		    frame.getContentPane().setBackground(Color.green); 
+        frame.getContentPane().setBackground(Color.green); 
         frame.setVisible(true);
     }
 }
@@ -31,8 +31,8 @@ class Hello2DFrame extends JFrame {
         int h = getHeight();
         g2d.drawLine(0,0, w,h);
         g2d.drawLine(0,h, w,0);
-		    g2d.setPaint(Color.blue); // foi adicionado uma nova cor (azul) para a forma geométrica que irá ser construída
-		    g2d.drawRect(40,50,100,100); // foi construído um retângulo
+        g2d.setPaint(Color.blue); // foi adicionado uma nova cor (azul) para a forma geométrica que irá ser construída
+	g2d.drawRect(40,50,100,100); // foi construído um retângulo
     }
 	
 }

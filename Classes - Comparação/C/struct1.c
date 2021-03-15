@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 typedef struct {
-    char canto[20];
-    char traco[20];
+    float x;
+    float y;
+    float w;
+    float h;
 }Rect;
 
 int main(){
-    Rect r = {"arredondado", "opcao 3"};
+    Rect r = {62.4, 191.7, 79.9, 62.5};
 }

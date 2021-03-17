@@ -2,8 +2,10 @@ public class RectApp {
     public static void main (String[] args) {
         Rect r1 = new Rect(50,25);
 	int a = r1.area();
-        System.out.println(a);
+        System.out.format("Area = %d\n", a);
 	r1.drag(10,20);
+	a = r1.area();
+        System.out.format("Valor da area apos a execucao da funcao drag = %d\n", a);
     }
 }
 class Rect {
@@ -18,9 +20,9 @@ class Rect {
     }
 	
     void drag(int dx, int dy){
-	 dx += this.x;
-	 dy += this.y;
-         System.out.format("dx = %d\ndy = %d\n", dx, dy);
+	 this.x += dx;
+         this.y += dy;
+	 System.out.format("Valor de x atual = %d\nValor de y atual = %d\n", this.x, this.y);
     }
   
 }

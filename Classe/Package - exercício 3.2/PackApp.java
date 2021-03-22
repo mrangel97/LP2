@@ -14,7 +14,7 @@ class PackApp {
 class PackFrame extends JFrame {
     Rect r1;
     Ellipse e1;
-    Line l1, l2, l3;
+    Triangle l1, l2, l3;
 
     PackFrame () {
         this.addWindowListener (
@@ -28,9 +28,9 @@ class PackFrame extends JFrame {
         this.setSize(350, 350);
         this.r1 = new Rect(50,50, 100,30, Color.pink, Color.black);
         this.e1 = new Ellipse(50,200, 100,30, Color.yellow, Color.black);
-        this.l1 = new Line(120, 130, 280, 130, Color.red);
-	this.l2 = new Line(120, 130, 200, 65, Color.red);
-	this.l3 = new Line(200, 65, 280, 130, Color.red);
+        this.l1 = new Triangle(120, 130, 280, 130, Color.red);
+	this.l2 = new Triangle(120, 130, 200, 65, Color.red);
+	this.l3 = new Triangle(200, 65, 280, 130, Color.red);
     }
 
     public void paint (Graphics g) {

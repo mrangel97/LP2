@@ -2,11 +2,11 @@ package figures;
 
 import java.awt.*;
 
-public class Line {
+public class Triangle {
     private int x, y;
     private int w, h;
 
-    public Line (int x, int y, int w, int h) {
+    public Triangle (int x, int y, int w, int h) {
         this.x = x;
         this.y = y;
         this.w = w;

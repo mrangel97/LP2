@@ -27,43 +27,43 @@ class ListFrame extends JFrame {
             }
         );
 		
-		this.addKeyListener (
-		    new KeyAdapter() {
-			    public void keyPressed (KeyEvent evt) {
-				    if(evt.getKeyChar() == 'r') {
-					        int x = rand.nextInt(350);
-                                                int y = rand.nextInt(350);
-                                                int w = rand.nextInt(50);
-                                                int h = rand.nextInt(50);
-						int r = rand.nextInt(256);
-						int g = rand.nextInt(256);
-						int b = rand.nextInt(256);
-						int drawR = rand.nextInt(256);
-						int drawG = rand.nextInt(256);
-						int drawB = rand.nextInt(256);
-                                                rs.add(new Rect(x, y, w, h, r, g, b, drawR, drawG, drawB));
-						repaint();
-				     }
-				     else if(evt.getKeyChar() == 'e') {
-					        int x = rand.nextInt(350);
-                                                int y = rand.nextInt(350);
-                                                int w = rand.nextInt(50);
-                                                int h = rand.nextInt(50);
-						int r = rand.nextInt(256);
-						int g = rand.nextInt(256);
-						int b = rand.nextInt(256);
-						int drawR = rand.nextInt(256);
-						int drawG = rand.nextInt(256);
-						int drawB = rand.nextInt(256);
-                                                es.add(new Ellipse(x, y, w, h, r, g, b, drawR, drawG, drawB));
-						repaint();
-				     }	
-			      }
-			}
-		);
+	this.addKeyListener (
+	      new KeyAdapter() {
+		    public void keyPressed (KeyEvent evt) {
+			if(evt.getKeyChar() == 'r') {
+			         int x = rand.nextInt(350);
+                                 int y = rand.nextInt(350);
+                                 int w = rand.nextInt(50);
+                                 int h = rand.nextInt(50);
+				 int r = rand.nextInt(256);
+				 int g = rand.nextInt(256);
+				 int b = rand.nextInt(256);
+				 int drawR = rand.nextInt(256);
+				 int drawG = rand.nextInt(256);
+				 int drawB = rand.nextInt(256);
+                                 rs.add(new Rect(x, y, w, h, r, g, b, drawR, drawG, drawB));
+				 repaint();
+		         }
+			 else if(evt.getKeyChar() == 'e') {
+			         int x = rand.nextInt(350);
+                                 int y = rand.nextInt(350);
+                                 int w = rand.nextInt(50);
+                                 int h = rand.nextInt(50);
+	                         int r = rand.nextInt(256);
+				 int g = rand.nextInt(256);
+				 int b = rand.nextInt(256);
+				 int drawR = rand.nextInt(256);
+				 int drawG = rand.nextInt(256);
+				 int drawB = rand.nextInt(256);
+                                 es.add(new Ellipse(x, y, w, h, r, g, b, drawR, drawG, drawB));
+				 repaint();
+		         }	
+	            }
+	      }
+	);
 
-                this.setTitle("Lista de Retangulos");
-                this.setSize(350, 350);
+        this.setTitle("Lista de Retangulos");
+        this.setSize(350, 350);
     }
 
     public void paint (Graphics g) {

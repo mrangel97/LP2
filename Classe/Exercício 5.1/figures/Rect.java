@@ -13,12 +13,12 @@ public class Rect {
         this.y = y;
         this.w = w;
         this.h = h;
-		this.r = r;
-		this.g = g;
-		this.b = b;
-		this.drawR = drawR;
-		this.drawG = drawG;
-		this.drawB = drawB;
+	this.r = r;
+	this.g = g;
+	this.b = b;
+	this.drawR = drawR;
+	this.drawG = drawG;
+	this.drawB = drawB;
 		
     }
 
@@ -29,9 +29,9 @@ public class Rect {
 
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(new Color(this.r, this.g, this.b));
-		g2d.fillRect(this.x,this.y, this.w,this.h);
-		g2d.setColor(new Color(this.drawR, this.drawG, this.drawB));
+	g2d.setColor(new Color(this.r, this.g, this.b));
+	g2d.fillRect(this.x,this.y, this.w,this.h);
+	g2d.setColor(new Color(this.drawR, this.drawG, this.drawB));
         g2d.drawRect(this.x,this.y, this.w,this.h);
     }
 }

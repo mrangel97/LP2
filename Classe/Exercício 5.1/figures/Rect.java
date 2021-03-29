@@ -5,8 +5,8 @@ import java.awt.*;
 public class Rect {
     int x, y;
     int w, h;
-	private int r, g, b;
-	private int drawR, drawG, drawB;
+    private int r, g, b;
+    private int drawR, drawG, drawB;
 
     public Rect (int x, int y, int w, int h, int r, int g, int b, int drawR, int drawG, int drawB) {
         this.x = x;

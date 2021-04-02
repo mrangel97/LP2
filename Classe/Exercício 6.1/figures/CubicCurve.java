@@ -5,13 +5,13 @@ import java.awt.geom.CubicCurve2D;
 import java.awt.geom.CubicCurve2D.Double;
 
 public class CubicCurve extends Figure {
-    int x, y;
+        int x, y;
 	int ctrlx1, ctrly1;
 	int x2, y2;
 	int ctrlx2, ctrly2;
 	
 	public CubicCurve (int x, int y, int ctrlx1, int ctrly1, int x2, int y2, int ctrlx2, int ctrly2) {
-	    this.x = x;
+	        this.x = x;
 		this.y = y;
 		this.ctrlx1 = ctrlx1;
 		this.ctrly1 = ctrly1;
@@ -28,6 +28,6 @@ public class CubicCurve extends Figure {
 	
 	public void paint (Graphics g) {
 	    Graphics2D g2d = (Graphics2D) g;
-        g2d.draw(new CubicCurve2D.Double(this.x, this.y, this.ctrlx1, this.ctrly1, this.x2, this.y2, this.ctrlx2, this.ctrly2));		
+            g2d.draw(new CubicCurve2D.Double(this.x, this.y, this.ctrlx1, this.ctrly1, this.x2, this.y2, this.ctrlx2, this.ctrly2));		
 	}
 }

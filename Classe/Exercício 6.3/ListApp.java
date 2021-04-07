@@ -39,13 +39,19 @@ class ListFrame extends JFrame {
 		    int y2 = rand.nextInt(350);
 		    int ctrlx2 = rand.nextInt(350);
 		    int ctrly2 = rand.nextInt(350);
+		    int r = rand.nextInt(256);
+		    int g = rand.nextInt(256);
+		    int b = rand.nextInt(256);
+		    int drawR = rand.nextInt(256);
+		    int drawG = rand.nextInt(256);
+		    int drawB = rand.nextInt(256);
                     if (evt.getKeyChar() == 'r') {
-                        Rect r = new Rect(x,y, w,h);
-                        figs.add(r);
+                        Rect r1 = new Rect(x,y, w, h, r, g, b, drawR, drawG, drawB);
+                        figs.add(r1);
                     } else if (evt.getKeyChar() == 'e') {
-                        figs.add(new Ellipse(x,y, w,h));
-                    }else if (evt.getKeyChar() == 'c') {
-			figs.add(new CubicCurve(x, y, ctrlx1, ctrly1, x2, y2, ctrlx2, ctrly2));
+                        figs.add(new Ellipse(x,y, w, h, r, g, b, drawR, drawG, drawB));
+                    } else if (evt.getKeyChar() == 'c') {
+			figs.add(new CubicCurve(x, y, ctrlx1, ctrly1, x2, y2, ctrlx2, ctrly2, r, g, b, drawR, drawG, drawB));
 		    }
                     repaint();
                 }

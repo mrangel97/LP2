@@ -27,27 +27,27 @@ class ListFrame extends JFrame {
             }
         );
 		
-		this.addMouseListener (
-		    new MouseAdapter() {
-			    public void mousePressed (MouseEvent evt) {    //ainda esta sendo desenvolvido
-				   focus = null;
-				   for (Figure fig: figs){
-				       if(fig.contains(evt.getX()) && fig.contains(evt.getY())){
-					        focus = fig;  
-				       }
-				   }
-				   repaint();
+	this.addMouseListener (
+	      new MouseAdapter() {
+		 public void mousePressed (MouseEvent evt) {    //ainda esta sendo desenvolvido
+			focus = null;
+			for (Figure fig: figs){
+			    if(fig.contains(evt.getX()) && fig.contains(evt.getY())){
+				    focus = fig;  
 			    }
-		     }
-		);
+		         }
+			 repaint();
+		  }
+	       }
+	);
 		
-		this.addMouseMotionListener (
-		    new MouseMotionAdapter() {
-			    public void mouseDragged (MouseEvent evt) {   //ainda esta sendo desenvolvido
-					System.out.format("Dragged\n");						
-			    }
-		    }
-		);
+	this.addMouseMotionListener (
+	       new MouseMotionAdapter() {
+		     public void mouseDragged (MouseEvent evt) {   //ainda esta sendo desenvolvido
+				System.out.format("Dragged\n");						
+		     }
+	       }
+	);
 		
 
         this.addKeyListener (

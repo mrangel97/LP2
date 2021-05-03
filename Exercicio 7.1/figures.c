@@ -61,7 +61,7 @@ Ellipse* ellipse_new (int x, int y, int w, int h) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-
+/*Figura Arco*/
 typedef struct {
     Figure super;
     int w, h, start, extent, type;
@@ -82,12 +82,12 @@ Arc* arc_new (int x, int y, int w, int h, int start, int extent, int type) {
     this->w = w;
     this->h = h;
     this->start = start; 
-	this->extent = extent; 
-	this->type = type;
+    this->extent = extent; 
+    this->type = type;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-
+/*Figura Curva Cubica*/
 typedef struct {
     Figure super;
     int x2, y2, ctrlx, ctrly, ctrlx2, ctrly2;
@@ -108,9 +108,9 @@ CubicCurve* cubic_new (int x, int y, int x2, int y2, int ctrlx, int ctrly, int c
     this->x2 = x2;
     this->y2 = y2;
     this->ctrlx = ctrlx; 
-	this->ctrly = ctrly; 
-	this->ctrlx2 = ctrlx2;
-	this->ctrly2 = ctrly2;
+    this->ctrly = ctrly; 
+    this->ctrlx2 = ctrlx2;
+    this->ctrly2 = ctrly2;
 }
 
 ///////////////////////////////////////////////////////////////////////////////

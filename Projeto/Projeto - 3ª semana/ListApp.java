@@ -30,13 +30,21 @@ class ListFrame extends JFrame {
 	   this.addMouseListener (
 		  new MouseAdapter() {
 			 public void mousePressed (MouseEvent evt) {  				
-				focus = null;
+				Point pos = new Point(getMousePosition());
+                                focus = null; 				
 				for (Figure fig: figs){
-				   if(fig.contains(evt)){
-					 focus = fig;
-				    }							
-				 }
-				 repaint();
+				    if((pos.x >= fig.x && pos.x <= (fig.w+fig.x)) && (pos.y >= fig.y && pos.y <= (fig.y+fig.h))) {
+					    focus = fig;
+					    figs.remove(fig);
+					    figs.add(fig);
+					    repaint();
+					    break;
+                                    }
+                                    else {
+                                         focus = null;
+                                         repaint();
+                                    }					
+			        }
 			  }
 		   }
 	    );
@@ -44,11 +52,11 @@ class ListFrame extends JFrame {
 	    this.addMouseMotionListener (
 		    new MouseMotionAdapter() {
 			    public void mouseDragged (MouseEvent evt) {         
-				    Point pos = evt.getPoint();
-                                    if (focus != null){
-                                           focus.mover(pos.x-focus.x, pos.y-focus.y);
-					   repaint();
-				    }					
+				Point pos = new Point(getMousePosition()); 
+                                if (focus != null){
+                                    focus.mover(pos.x-focus.x, pos.y-focus.y);
+				    repaint();
+				 }					
 			    }
 		    }
 	    );
@@ -61,12 +69,6 @@ class ListFrame extends JFrame {
                                         int y = rand.nextInt(350);
                                         int w = rand.nextInt(50);
                                         int h = rand.nextInt(50);
-					int ctrlx1 = rand.nextInt(350);
-					int ctrly1 = rand.nextInt(350);
-					int x2 = rand.nextInt(350);
-					int y2 = rand.nextInt(350);
-					int ctrlx2 = rand.nextInt(350);
-					int ctrly2 = rand.nextInt(350);
 					int r = rand.nextInt(256);
 				        int g = rand.nextInt(256);
 				        int b = rand.nextInt(256);
@@ -82,8 +84,8 @@ class ListFrame extends JFrame {
 					       figs.add(r1);
 				        } else if (evt.getKeyChar() == 'e') {
 						figs.add(new Ellipse(x,y, w,h, r, g, b, drawR, drawG, drawB));
-					} else if (evt.getKeyChar() == 'c') {
-					        figs.add(new CubicCurve(x, y, ctrlx1, ctrly1, x2, y2, ctrlx2, ctrly2, r, g, b, drawR, drawG, drawB));
+					} else if (evt.getKeyChar() == 'o') {
+					        figs.add(new Oval(x, y, w, h, r, g, b, drawR, drawG, drawB));
 					} else if (evt.getKeyChar() == 'a') {
 					        figs.add(new Arc(x, y, w, h, start, extent, type, r, g, b, drawR, drawG, drawB));
 					// Deletar a figura que estiver focada

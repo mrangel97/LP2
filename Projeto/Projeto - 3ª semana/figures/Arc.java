@@ -7,7 +7,6 @@ import java.awt.event.*;
 
 public class Arc extends Figure {
 	int start, extent, type;
-	Arc2D.Double aa;
 	
 	public Arc (int x, int y, int w, int h, int start, int extent, int type, int r, int g, int b, int drawR, int drawG, int drawB) {
 	        this.x = x;
@@ -23,19 +22,10 @@ public class Arc extends Figure {
 		this.drawR = drawR;
 		this.drawG = drawG;
 		this.drawB = drawB;
-		this.aa = new Arc2D.Double(this.x, this.y, this.w, this.h, this.start, this.extent, this.type);
 	}
 	
 	public void print() {
 	    System.out.format("Arco de tamanho (%d,%d) na posicao (%d,%d).\n", this.w, this.h, this.x, this.y);
-	}
-	
-	public boolean contains(MouseEvent evt){
-	    if(this.aa.contains(evt.getPoint())){
-		return true; 
-	    }else{
-		return false;
-	    }
 	}
 	
 	public void paint (Graphics g) {

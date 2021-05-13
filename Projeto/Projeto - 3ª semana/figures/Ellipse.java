@@ -6,7 +6,6 @@ import java.awt.geom.Ellipse2D.Double;
 import java.awt.event.*;
 
 public class Ellipse extends Figure {
-	Ellipse2D.Double ellipse;
 	
        public Ellipse (int x, int y, int w, int h, int r, int g, int b, int drawR, int drawG, int drawB) {
 	        this.x = x;
@@ -19,19 +18,10 @@ public class Ellipse extends Figure {
 		this.drawR = drawR;
 		this.drawG = drawG;
 		this.drawB = drawB;
-		this.ellipse = new Ellipse2D.Double(this.x,this.y, this.w,this.h);
 	}
 	
 	public void print() {
 	    System.out.format("Elipse de tamanho (%d,%d) na posicao (%d,%d).\n", this.w, this.h, this.x, this.y);
-	}
-	
-	public boolean contains(MouseEvent evt){
-	    if(this.ellipse.contains(evt.getPoint())){
-		 return true; 
-	    }else{
-		 return false;
-	    }
 	}
 	
 	public void paint (Graphics g) {

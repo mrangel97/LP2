@@ -33,5 +33,4 @@ public abstract class Figure {
     }	
 	
     public abstract void paint (Graphics g);
-    public abstract boolean contains(MouseEvent evt);
 }

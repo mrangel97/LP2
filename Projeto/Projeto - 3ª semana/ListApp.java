@@ -157,11 +157,11 @@ class ListFrame extends JFrame {
                                         } else if(evt.getKeyChar() == '8'){
 					        if(focus!=null){
 							   focus.mudarCorContorno(255,255,0);  // amarelo
-					}	
-                                  }								
-                                  repaint();
-                             }
-                }
+					        }	
+                                        }								
+                                        repaint();
+                                  }
+                 }
         );
 
         this.setTitle("Lista de Figuras");

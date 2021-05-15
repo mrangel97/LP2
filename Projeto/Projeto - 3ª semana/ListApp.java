@@ -65,8 +65,7 @@ class ListFrame extends JFrame {
             this.addKeyListener (
                  new KeyAdapter() {
                                     public void keyPressed (KeyEvent evt) {
-                                        int x = rand.nextInt(350);
-                                        int y = rand.nextInt(350);
+                                        Point pos = new Point(getMousePosition());
                                         int w = rand.nextInt(50);
                                         int h = rand.nextInt(50);
 					int r = rand.nextInt(256);
@@ -80,14 +79,14 @@ class ListFrame extends JFrame {
 					int type = rand.nextInt(3);
 					// Criação das figuras
 					if (evt.getKeyChar() == 'r') {
-					       Rect r1 = new Rect(x,y, w,h, r, g, b, drawR, drawG, drawB);
+					       Rect r1 = new Rect(pos.x, pos.y, w,h, r, g, b, drawR, drawG, drawB);
 					       figs.add(r1);
 				        } else if (evt.getKeyChar() == 'e') {
-						figs.add(new Ellipse(x,y, w,h, r, g, b, drawR, drawG, drawB));
+						figs.add(new Ellipse(pos.x, pos.y, w,h, r, g, b, drawR, drawG, drawB));
 					} else if (evt.getKeyChar() == 'o') {
-					        figs.add(new Oval(x, y, w, h, r, g, b, drawR, drawG, drawB));
+					        figs.add(new Oval(pos.x, pos.y, w, h, r, g, b, drawR, drawG, drawB));
 					} else if (evt.getKeyChar() == 'a') {
-					        figs.add(new Arc(x, y, w, h, start, extent, type, r, g, b, drawR, drawG, drawB));
+					        figs.add(new Arc(pos.x, pos.y, w, h, start, extent, type, r, g, b, drawR, drawG, drawB));
 					// Deletar a figura que estiver focada
 					} else if(evt.getKeyCode() == KeyEvent.VK_DELETE){
                                                figs.remove(focus);

@@ -3,7 +3,7 @@
    // a) Cenário representativo
    
     /*              Classe D&D
-	          /      |     \
+	          /      |     \            Todas as subclasses citadas apresentam características em comum como, por exemplo, poder, força, ataque e outros.
 	         /       |      \
 		/        |       \
 	     Guerreiro  Mago    Ladino
@@ -11,7 +11,7 @@
 	*/
 	
 	/* b) Usei esse exemplo como caso de uso para a classe abstrata pois, ao construir um personagem de D&D, há um conjunto de classes fora 
-              esses que apresentei no cenário respresentativo que o jogador pode escolher para fazer o personagem. Com isso, foquei nisso como 
+              esses que apresentei no cenário representativo que o jogador pode escolher para fazer o personagem. Com isso, foquei nisso como 
 	      uma superclasse e as classes dos personagens foquei como subclasses. E em cada classe, apresenta características em comum como
               força, ataque, poder e outros. */
 
@@ -50,4 +50,4 @@
 	    interface Openable {
 		    void open ( void );
 		    void close( void );
-		}
+	    }

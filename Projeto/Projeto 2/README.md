@@ -3,7 +3,7 @@
 <li>Retângulo</li>
 <li>Elipse</li>
 <li>Arco</li>
-<li>Oval</li>
+<li>Oval</li><br>
 <p>Teclas do teclado:</p>
 <li>'R' - Desenha um retângulo</li>
 <li>'E' - Desenha uma elipse</li>

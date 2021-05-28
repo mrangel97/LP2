@@ -20,3 +20,4 @@
 <li>Após clicar no botão, clique em uma parte da tela que esteja fora do botão para criar a figura</li>
 <li>Após mouse ser pressionado na figura focada, é possível arrastá-la pela tela através do movimento do mouse</li>
 <li>Ao clicar na figura, ela será focada</li>
+<li>A figura é sempre criada na posição que o mouse estiver no momento</li>

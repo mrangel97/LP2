@@ -13,7 +13,7 @@ public class Oval extends Figure {
 	}
 	
 	public void paint (Graphics g, boolean focused) {
-	    Graphics2D g2d = (Graphics2D) g;
+	        Graphics2D g2d = (Graphics2D) g;
 		
 		if(focused) {
 		   g2d.setColor(Color.red);
@@ -23,6 +23,6 @@ public class Oval extends Figure {
 		g2d.setColor(new Color(this.r, this.g, this.b));
 		g2d.fillOval(this.x,this.y, this.w,this.h);
 		g2d.setColor(new Color(this.drawR, this.drawG, this.drawB));
-        g2d.drawOval(this.x, this.y, this.w, this.h);		
+                g2d.drawOval(this.x, this.y, this.w, this.h);		
 	}
 }

@@ -8,7 +8,7 @@ public class Oval extends Figure {
 	     super(x,y,w,h,r,g,b,drawR,drawG,drawB);
 	}
 	
-	public void print() {
+	private void print() {
 	    System.out.format("Oval de tamanho (%d,%d) na posicao (%d,%d).\n", this.w, this.h, this.x, this.y);
 	}
 	
